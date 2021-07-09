@@ -1,0 +1,56 @@
+# Keybindings
+
+key_bindings:
+  - { key: N,  mods: Control|Shift, action: SpawnNewInstance }
+
+window:
+  dimensions:
+    columns: 180
+    lines: 45
+
+  padding:
+    x: 20
+    y: 16
+
+  decorations: None
+
+background_opacity: 0.925
+
+font:
+  size: 13
+
+draw_bold_text_with_bright_colors: true
+
+colors:
+
+  primary:
+    background: '#282a36'
+    foreground: '#eff0eb'
+
+  selection:
+    text:       '#282a36'
+    background: '#feffff'
+
+  normal:
+    black:   '#282a36'
+    red:     '#ff5c57'
+    green:   '#5af78e'
+    yellow:  '#f3f99d'
+    blue:    '#57c7ff'
+    magenta: '#ff6ac1'
+    cyan:    '#9aedfe'
+    white:   '#f1f1f0'
+
+  bright:
+    black:   '#686868'
+    red:     '#ff5c57'
+    green:   '#5af78e'
+    yellow:  '#f3f99d'
+    blue:    '#57c7ff'
+    magenta: '#ff6ac1'
+    cyan:    '#9aedfe'
+    white:   '#eff0eb'
+
+cursor:
+  style: Block
+  unfocused_hollow: true

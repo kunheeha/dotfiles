@@ -1,15 +1,29 @@
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/goyo.vim' | Plug 'junegunn/limelight.vim'
 Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'nightsense/snow'
+Plug 'vimwiki/vimwiki'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
+set nocompatible
+filetype plugin on
+syntax on
+set encoding=UTF-8
 
 " Colour and theme
+colorscheme nord
+let g:airline_theme='nord'
+let g:airline_powerline_fonts=1
 set termguicolors
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 let g:limelight_conceal_ctermfg=240
 let g:limelight_conceal_guifg='#777777'
-
 set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab
 set wildmenu
 set wildmode=longest:full,full
@@ -17,14 +31,6 @@ set wildmode=longest:full,full
 set splitbelow
 set splitright
 
-" Status Line
-set laststatus=2
-set statusline=
-set statusline+=\ %y
-set statusline+=\ %f
-set statusline+=%=
-set statusline+=\ %l/%L
-set statusline+=\ [%c]
 
 " Custom keybindings
 " Reload

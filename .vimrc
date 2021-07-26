@@ -1,4 +1,10 @@
 call plug#begin('~/.vim/plugged')
+Plug 'airblade/vim-gitgutter'
+Plug 'dense-analysis/ale'
+Plug 'tpope/vim-surround'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim' | Plug 'junegunn/limelight.vim'
 Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
 Plug 'preservim/nerdtree'
@@ -14,6 +20,7 @@ set nocompatible
 filetype plugin on
 syntax on
 set encoding=UTF-8
+set nu rnu
 
 " Colour and theme
 colorscheme nord
@@ -31,6 +38,15 @@ set wildmode=longest:full,full
 set splitbelow
 set splitright
 
+" Automatic closing brackets and more
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
 
 " Custom keybindings
 " Reload
@@ -44,8 +60,6 @@ nmap <Left> :vertical resize +2<Enter>
 vmap <C-c> "*y
 " Paste in normal mode
 nmap <C-p> <Esc>"*p
-" Go to start of line in insert mode
-imap <C-a> <Esc>^i
 
 
 "Goyo Configuration
@@ -77,3 +91,4 @@ endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
+

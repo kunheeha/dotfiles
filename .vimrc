@@ -15,6 +15,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'nightsense/snow'
 Plug 'vimwiki/vimwiki'
 Plug 'arcticicestudio/nord-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'gcmt/taboo.vim'
+Plug 'wincent/ferret'
+Plug 'szw/vim-maximizer'
 call plug#end()
 set nocompatible
 filetype plugin on
@@ -91,4 +95,3 @@ endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
-

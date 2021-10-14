@@ -50,7 +50,7 @@ autoload -U compinit && compinit
 # else
 #   export EDITOR='mvim'
 # fi
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
@@ -63,3 +63,6 @@ fi
 source ~/.zsh/zsh-dircolors-nord/zsh-dircolors-nord.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+eval "$(nodenv init -)"

@@ -25,6 +25,7 @@ filetype plugin on
 syntax on
 set encoding=UTF-8
 set nu rnu
+set noswapfile
 
 " Colour and theme
 colorscheme nord
@@ -64,6 +65,8 @@ nmap <Left> :vertical resize +2<Enter>
 vmap <C-c> "*y
 " Paste in normal mode
 nmap <C-p> <Esc>"*p
+" fzf by Ctrl f
+nmap <C-f> :FZF<Enter>
 
 
 "Goyo Configuration

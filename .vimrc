@@ -67,6 +67,11 @@ vmap <C-c> "*y
 nmap <C-p> <Esc>"*p
 " fzf by Ctrl f
 nmap <C-f> :FZF<Enter>
+" Maximise current vim window
+nmap <Leader>f :Maximizer<Enter>
+" Previous opened file
+nmap <Leader>b :e#<Enter>
+
 
 
 "Goyo Configuration

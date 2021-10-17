@@ -19,13 +19,19 @@ Plug 'tpope/vim-fugitive'
 Plug 'gcmt/taboo.vim'
 Plug 'wincent/ferret'
 Plug 'szw/vim-maximizer'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdcommenter'
 call plug#end()
 set nocompatible
 filetype plugin on
 syntax on
 set encoding=UTF-8
 set nu rnu
+
+" Backups (None)
 set noswapfile
+set nobackup
+set nowritebackup
 
 " Colour and theme
 colorscheme nord
@@ -42,6 +48,7 @@ set wildmode=longest:full,full
 
 set splitbelow
 set splitright
+
 
 " Automatic closing brackets and more
 inoremap " ""<left>
@@ -71,8 +78,13 @@ nmap <C-f> :FZF<Enter>
 nmap <Leader>f :Maximizer<Enter>
 " Previous opened file
 nmap <Leader>b :e#<Enter>
-
-
+" NerdTree toggle
+nmap <C-n> :NERDTreeToggle<Enter>
+" relative numbers
+nmap <Leader>rn :set rnu<Enter>
+" Commenter
+nmap <Leader>/ <plug>NERDCommenterToggle
+vmap <Leader>/ <plug>NERDCommenterToggle
 
 "Goyo Configuration
 

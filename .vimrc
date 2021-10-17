@@ -82,6 +82,7 @@ nmap <Leader>b :e#<Enter>
 nmap <C-n> :NERDTreeToggle<Enter>
 " relative numbers
 nmap <Leader>rn :set rnu<Enter>
+nmap <Leader>nrn :set nornu<Enter>
 " Commenter
 nmap <Leader>/ <plug>NERDCommenterToggle
 vmap <Leader>/ <plug>NERDCommenterToggle

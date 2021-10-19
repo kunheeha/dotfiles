@@ -10,3 +10,4 @@
   ps = push
   pl = pull
   f = fetch
+  s = status

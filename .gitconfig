@@ -1,0 +1,12 @@
+[user]
+	email = kunheeha@gmail.com
+[alias]
+	ch = checkout
+  b = branch
+	bs = branch --list
+  c = commit -m
+  bd = branch -d
+  A = add .
+  ps = push
+  pl = pull
+  f = fetch

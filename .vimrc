@@ -12,18 +12,30 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Colourscheme snow
 Plug 'nightsense/snow'
 Plug 'vimwiki/vimwiki'
+" Colourscheme Nord
 Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'gcmt/taboo.vim'
 Plug 'wincent/ferret'
 Plug 'szw/vim-maximizer'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Commenting lines
 Plug 'preservim/nerdcommenter'
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+" Visualise undo history
+Plug 'mbbill/undotree'
+" Colourscheme monokai-tasty
+Plug 'patstockwell/vim-monokai-tasty'
+" Colourscheme Snazzy
+Plug 'connorholyday/vim-snazzy'
 call plug#end()
 set nocompatible
 filetype plugin on
+" Syntax highlighting
 syntax on
 set encoding=UTF-8
 set nu rnu
@@ -34,21 +46,38 @@ set nobackup
 set nowritebackup
 
 " Colour and theme
+
+" NORD
 colorscheme nord
 let g:airline_theme='nord'
+
+ "Snow
+"colorscheme snow
+
+" Monokai-tasty
+"colorscheme vim-monokai-tasty
+
+" Snazzy
+"colorscheme snazzy
+"let g:SnazzyTransparent=1
+
 let g:airline_powerline_fonts=1
 set termguicolors
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 let g:limelight_conceal_ctermfg=240
 let g:limelight_conceal_guifg='#777777'
-set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab
 set wildmenu
 set wildmode=longest:full,full
 
 set splitbelow
 set splitright
 
+" Tabs for python
+"set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab
+
+" Tabs for JSON
+set shiftwidth=2 autoindent smartindent tabstop=2 softtabstop=2 expandtab
 
 " Automatic closing brackets and more
 inoremap " ""<left>
@@ -61,8 +90,16 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 
 " Custom keybindings
+let mapleader=',,'
+" ii for escape
+imap ii <Esc>
+vmap ii <Esc>
 " Reload
 nmap <C-z> :source ~/.vimrc<Enter>
+" Write
+nmap <Leader>w :w<Enter>
+" Quit
+nmap <Leader>q :q<Enter>
 " Resize tab
 nmap <Up> :resize +2<Enter>
 nmap <Down> :resize -2<Enter>
@@ -79,13 +116,19 @@ nmap <Leader>f :Maximizer<Enter>
 " Previous opened file
 nmap <Leader>b :e#<Enter>
 " NerdTree toggle
-nmap <C-n> :NERDTreeToggle<Enter>
+nmap <Leader>n :NERDTreeToggle<Enter>
 " relative numbers
-nmap <Leader>rn :set rnu<Enter>
-nmap <Leader>nrn :set nornu<Enter>
+nmap <Leader>nr :set invrnu<Enter>
 " Commenter
 nmap <Leader>/ <plug>NERDCommenterToggle
 vmap <Leader>/ <plug>NERDCommenterToggle
+" Set Cursorline
+nmap <Leader>c :set cursorcolumn!<Bar>set cursorline!<Enter>
+" UndoTree toggle 
+nmap <Leader>u :UndotreeToggle<Enter>
+" Show my custom keybindings
+nmap <Leader>kb :vsplit ~/vimwiki/VIMRC.wiki<Enter>
+
 
 "Goyo Configuration
 
@@ -116,3 +159,4 @@ endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
+

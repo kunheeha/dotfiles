@@ -44,4 +44,12 @@ yabai -m config left_padding                 12
 yabai -m config right_padding                12
 yabai -m config window_gap                   06
 
+yabai -m space 1 --label Code
+yabai -m space 2 --label Server
+yabai -m space 3 --label LocalApp
+yabai -m space 4 --label Web
+yabai -m space 5 --label Slack
+yabai -m space 6 --label AppSupport
+
+
 echo "yabai configuration loaded.."

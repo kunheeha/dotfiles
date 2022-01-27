@@ -12,6 +12,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" VisIncr
+Plug 'vim-scripts/VisIncr'
 " Colourscheme snow
 Plug 'nightsense/snow'
 Plug 'vimwiki/vimwiki'
@@ -100,6 +102,8 @@ nmap <C-z> :source ~/.vimrc<Enter>
 nmap <Leader>w :w<Enter>
 " Quit
 nmap <Leader>q :q<Enter>
+" Open new tab
+nmap <Leader>t :tabe<Enter>
 " Resize tab
 nmap <Up> :resize +2<Enter>
 nmap <Down> :resize -2<Enter>
@@ -110,7 +114,7 @@ vmap <C-c> "*y
 " Paste in normal mode
 nmap <C-p> <Esc>"*p
 " fzf by Ctrl f
-nmap <C-f> :FZF<Enter>
+nmap <C-f> :Files<Enter>
 " Maximise current vim window
 nmap <Leader>f :Maximizer<Enter>
 " Previous opened file
@@ -123,7 +127,9 @@ nmap <Leader>nr :set invrnu<Enter>
 nmap <Leader>/ <plug>NERDCommenterToggle
 vmap <Leader>/ <plug>NERDCommenterToggle
 " Set Cursorline
-nmap <Leader>c :set cursorcolumn!<Bar>set cursorline!<Enter>
+nmap <Leader>cl :set cursorline!<Enter>
+" Set Cursorcolumn
+nmap <Leader>cc :set cursorcolumn!<Enter>
 " UndoTree toggle 
 nmap <Leader>u :UndotreeToggle<Enter>
 " Show my custom keybindings

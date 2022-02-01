@@ -34,6 +34,8 @@ Plug 'mbbill/undotree'
 Plug 'patstockwell/vim-monokai-tasty'
 " Colourscheme Snazzy
 Plug 'connorholyday/vim-snazzy'
+" Markdown Preview
+Plug 'iamcco/markdown-preview.vim'
 call plug#end()
 set nocompatible
 filetype plugin on
@@ -134,6 +136,8 @@ nmap <Leader>cc :set cursorcolumn!<Enter>
 nmap <Leader>u :UndotreeToggle<Enter>
 " Show my custom keybindings
 nmap <Leader>kb :vsplit ~/vimwiki/VIMRC.wiki<Enter>
+" Rename tab
+nmap <Leader>nt :TabooRename 
 
 
 "Goyo Configuration

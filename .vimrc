@@ -1,27 +1,36 @@
 call plug#begin('~/.vim/plugged')
+"Gitgutter
 Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
+"Visual Multi (select next pattern in Visual mode, like multicursor)
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+"FuzzyFinder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+"Goyo with limelight
 Plug 'junegunn/goyo.vim' | Plug 'junegunn/limelight.vim'
 Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
+"NerdTree
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
+"Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " VisIncr
 Plug 'vim-scripts/VisIncr'
 " Colourscheme snow
 Plug 'nightsense/snow'
+"VimWiki
 Plug 'vimwiki/vimwiki'
 " Colourscheme Nord
 Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'gcmt/taboo.vim'
+"Word Find
 Plug 'wincent/ferret'
+"Maximise Window
 Plug 'szw/vim-maximizer'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Commenting lines
@@ -30,19 +39,27 @@ Plug 'preservim/nerdcommenter'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " Visualise undo history
 Plug 'mbbill/undotree'
-" Colourscheme monokai-tasty
-Plug 'patstockwell/vim-monokai-tasty'
-" Colourscheme Snazzy
-Plug 'connorholyday/vim-snazzy'
 " Markdown Preview
 Plug 'iamcco/markdown-preview.vim'
+"Tagbar
+Plug 'preservim/tagbar'
+"IndentGuides
+Plug 'nathanaelkane/vim-indent-guides'
+"Dim Inactive
+Plug 'blueyed/vim-diminactive'
+"Floaterm
+Plug 'voldikss/vim-floaterm'
 call plug#end()
+
 set nocompatible
 filetype plugin on
 " Syntax highlighting
 syntax on
 set encoding=UTF-8
+"Relative numbers
 set nu rnu
+"Cursorline
+set cursorline
 
 " Backups (None)
 set noswapfile
@@ -51,19 +68,13 @@ set nowritebackup
 
 " Colour and theme
 
-" NORD
+"NORD
 colorscheme nord
 let g:airline_theme='nord'
 
- "Snow
+"Snow
 "colorscheme snow
 
-" Monokai-tasty
-"colorscheme vim-monokai-tasty
-
-" Snazzy
-"colorscheme snazzy
-"let g:SnazzyTransparent=1
 
 let g:airline_powerline_fonts=1
 set termguicolors
@@ -138,6 +149,10 @@ nmap <Leader>u :UndotreeToggle<Enter>
 nmap <Leader>kb :vsplit ~/vimwiki/VIMRC.wiki<Enter>
 " Rename tab
 nmap <Leader>nt :TabooRename 
+"ToggleIndentation
+nmap <Leader>i :IndentGuidesToggle<Enter>
+"ToggleTagbar
+nmap <Leader>d :TagbarToggle<Enter>
 
 
 "Goyo Configuration

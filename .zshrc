@@ -66,3 +66,6 @@ source ~/.zsh/zsh-dircolors-nord/zsh-dircolors-nord.zsh
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 eval "$(nodenv init -)"
+
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh

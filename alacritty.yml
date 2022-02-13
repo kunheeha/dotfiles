@@ -1,5 +1,10 @@
 key_bindings:
   - { key: N,  mods: Control|Shift, action: SpawnNewInstance }
+  - { key: Right, mods: Alt, chars: "\x1BF" }
+  - { key: Left,  mods: Alt, chars: "\x1BB" }
+  - { key: Key0, mods: Control, action: ResetFontSize}
+  - { key: Equals, mods: Control|Shift, action: IncreaseFontSize}
+  - { key: Minus, mods: Control|Shift, action: DecreaseFontSize}
 
 window:
   dimensions:
@@ -16,9 +21,9 @@ background_opacity: 0.95
 
 font:
   normal:
-    family: FiraMono Nerd Font
+    family: Hack Nerd Font 
     style: Regular
-  size: 13
+  size: 13.5
 
 draw_bold_text_with_bright_colors: true
 

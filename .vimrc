@@ -1,13 +1,17 @@
 call plug#begin('~/.vim/plugged')
 "Gitgutter
 Plug 'airblade/vim-gitgutter'
+"Display Syntax errors
 Plug 'dense-analysis/ale'
+"Surroundings ("". '', (), [] etc)
 Plug 'tpope/vim-surround'
 "Visual Multi (select next pattern in Visual mode, like multicursor)
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 "FuzzyFinder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+"RipGrep with FZF
+Plug 'wookayin/fzf-ripgrep.vim'
 "Goyo with limelight
 Plug 'junegunn/goyo.vim' | Plug 'junegunn/limelight.vim'
 Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
@@ -28,8 +32,6 @@ Plug 'vimwiki/vimwiki'
 Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'gcmt/taboo.vim'
-"Word Find
-Plug 'wincent/ferret'
 "Maximise Window
 Plug 'szw/vim-maximizer'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -136,6 +138,8 @@ vmap <C-c> "*y
 nmap <C-p> <Esc>"*p
 " fzf by Ctrl f
 nmap <C-f> :Files<Enter>
+"fzf with RipGrep by Ctrl g
+nmap <C-g> :Rg<Enter>
 " Maximise current vim window
 nmap <Leader>f :Maximizer<Enter>
 " Previous opened file
@@ -163,6 +167,11 @@ nmap <Leader>i :IndentGuidesToggle<Enter>
 nmap <Leader>d :TagbarToggle<Enter>
 "Tab completion
 imap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+"indentation in visual mode (stay in visual)
+vmap < <gv
+vmap > >gv
+"Exit Term mode with Esc
+tmap <ESC> <C-\><C-n>
 
 
 "Goyo Configuration

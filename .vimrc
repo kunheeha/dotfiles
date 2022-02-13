@@ -55,6 +55,10 @@ set nocompatible
 filetype plugin on
 " Syntax highlighting
 syntax on
+"Vim8's annoying auto line wrap
+set nowrap
+"Mouse click
+set mouse=a
 set encoding=UTF-8
 "Relative numbers
 set nu rnu
@@ -85,7 +89,9 @@ let g:limelight_conceal_guifg='#777777'
 set wildmenu
 set wildmode=longest:full,full
 
+"Horizontal splits to split below
 set splitbelow
+"Vertical splits to split to right
 set splitright
 
 " Tabs for python

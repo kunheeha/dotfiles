@@ -33,13 +33,13 @@ Plug 'wincent/ferret'
 "Maximise Window
 Plug 'szw/vim-maximizer'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Commenting lines
+"Commenting lines
 Plug 'preservim/nerdcommenter'
-" post install (yarn install | npm install) then load plugin only for editing supported files
+"post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-" Visualise undo history
+"Visualise undo history
 Plug 'mbbill/undotree'
-" Markdown Preview
+"Markdown Preview
 Plug 'iamcco/markdown-preview.vim'
 "Tagbar
 Plug 'preservim/tagbar'
@@ -53,7 +53,7 @@ call plug#end()
 
 set nocompatible
 filetype plugin on
-" Syntax highlighting
+"Syntax highlighting
 syntax on
 "Vim8's annoying auto line wrap
 set nowrap
@@ -65,12 +65,12 @@ set nu rnu
 "Cursorline
 set cursorline
 
-" Backups (None)
+"Backups (None)
 set noswapfile
 set nobackup
 set nowritebackup
 
-" Colour and theme
+"Colour and theme
 
 "NORD
 colorscheme nord
@@ -123,7 +123,9 @@ nmap <Leader>w :w<Enter>
 nmap <Leader>q :q<Enter>
 " Open new tab
 nmap <Leader>t :tabe<Enter>
-" Resize tab
+" Tab to quick move tabs
+nmap <TAB> gt
+" Resize window
 nmap <Up> :resize +2<Enter>
 nmap <Down> :resize -2<Enter>
 nmap <Right> :vertical resize -2<Enter>
@@ -159,6 +161,8 @@ nmap <Leader>nt :TabooRename
 nmap <Leader>i :IndentGuidesToggle<Enter>
 "ToggleTagbar
 nmap <Leader>d :TagbarToggle<Enter>
+"Tab completion
+imap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 
 "Goyo Configuration

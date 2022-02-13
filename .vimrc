@@ -138,10 +138,14 @@ vmap <C-c> "*y
 nmap <C-p> <Esc>"*p
 " fzf by Ctrl f
 nmap <C-f> :Files<Enter>
+"Floaterm 
+nmap <Leader>f :FloatermToggle<Enter>
 "fzf with RipGrep by Ctrl g
 nmap <C-g> :Rg<Enter>
+"RipGrep on current file
+nmap <Leader>g :BLine<Enter>
 " Maximise current vim window
-nmap <Leader>f :Maximizer<Enter>
+nmap <Leader>m :Maximizer<Enter>
 " Previous opened file
 nmap <Leader>b :e#<Enter>
 " NerdTree toggle
@@ -170,8 +174,8 @@ imap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 "indentation in visual mode (stay in visual)
 vmap < <gv
 vmap > >gv
-"Exit Term mode with Esc
-tmap <ESC> <C-\><C-n>
+"Exit term mode with esc
+tmap <Esc> <C-n><C-\>
 
 
 "Goyo Configuration

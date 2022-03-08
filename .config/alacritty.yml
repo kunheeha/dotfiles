@@ -1,3 +1,6 @@
+env:
+  TERM: xterm-256color
+
 key_bindings:
   - { key: N,  mods: Control|Shift, action: SpawnNewInstance }
   - { key: Right, mods: Alt, chars: "\x1BF" }
@@ -5,6 +8,11 @@ key_bindings:
   - { key: Key0, mods: Control, action: ResetFontSize}
   - { key: Equals, mods: Control|Shift, action: IncreaseFontSize}
   - { key: Minus, mods: Control|Shift, action: DecreaseFontSize}
+
+debug:
+  print_events: true
+
+live_config_reload: true
 
 window:
   dimensions:
@@ -15,21 +23,29 @@ window:
     x: 20
     y: 16
 
-  decorations: None
+  decorations: none
 
-background_opacity: 0.95
+  opacity: 1.0
+  background_blur: true
 
 font:
   normal:
     family: Hack Nerd Font 
     style: Regular
   size: 13.5
+  #Only for Mac
+  #use_thin_strokes: true
 
 draw_bold_text_with_bright_colors: true
 
+cursor:
+  style: Beam
+  unfocussed_hollow: true
+
 colors:
   primary:
-    background: '#1B1D1E'
+    background: '#1b1e24'
+    #background: '#1B1D1E'
     foreground: '#d8dee9'
     dim_foreground: '#a5abb6'
   cursor:
